@@ -96,20 +96,7 @@ body{
 									</div>
 
 									<select class="form-control" id="an_fn">
-										<?php
-											require('connect_bdd.php');
-											$query = new Query_bdd;
-											$aseho = $query->ijery_fanafody();
-
-											$tab = array();
-											$i = 0;
-											while($donne = $aseho->fetch()){
-												?>
-												<option> <?=$donne['nom']?> </option>
-												<?php
-												$i++;
-											}
-										?>
+									
 									</select>
 								</div>
 

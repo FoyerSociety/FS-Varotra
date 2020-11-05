@@ -1,48 +1,3 @@
-<?php
-	//erreur sur l'ajout----------------------------------------------------------------------------------------------------
-	require('connect_bdd.php');
-	if (isset($_GET['erreur'])){
-		if ($_GET['erreur'] == 'true') {
-			$erreur = 'Solonanarana na tenimiafina diso';
-		}
-	}
-	//mamafa---------------------------------------------------------------------------------------------------------------
-	if (isset($_GET['succes'])){
-		if ($_GET['succes'] == 'true') {
-			$succes = 'Voafafa tsara ilay fanafody';
-			$succesx = 'x';
-
-		}
-	}
-	//erreur reference----------------------------------------------------------------------------------------------------
-	if (isset($_GET['erreur_ref_ana_mitov'])){
-		if ($_GET['erreur_ref_ana_mitov'] == 'true') {
-			$err_jiab = 'Efa misy io famantarana na io anarana io';
-		}
-	}
-	//erreur isa----------------------------------------------------------------------------------------------------------
-	if (isset($_GET['erreur_isa'])){
-		if ($_GET['erreur_isa'] == 'true') {
-			$err_jiab = "Hamarino tsara ny isan'ny fanafody nampidirinao";
-		}
-	}
-	//erreur vidy----------------------------------------------------------------------------------------------------------
-	if (isset($_GET['erreur_vola'])){
-		if ($_GET['erreur_vola'] == 'true') {
-			$err_jiab = "Hamarino tsara ny vidin'ny fanafody nampidirinao";
-		}
-	}
-	if (isset($_GET['erreur_reference_int'])){
-		if ($_GET['erreur_reference_int'] == 'true') {
-			$err_jiab = "Hamarino tsara ny vidin'ny fanafody nampidirinao";
-		}
-	}
-	//session_start--------------------------------------------------------------------------------------------------------
-	session_start();
-	if (isset($_SESSION['solonanarana'] )) {
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,17 +61,7 @@ $(document).ready(function(){
 <body onclick=pageb()>
 
 
-<<<<<<< HEAD
-=======
-	<?php
-		gettype($err_jiab);
-		echo($err_jiab);
-
-	?>
-
-
->>>>>>> 79f658af49ee9d4d466415fb72a3041f2f0d0b7a
-    	<div class="container">
+<div class="container">
 		<div class="table-wrapper">
 			<div class="table-title">
 				<div class="row">
@@ -144,25 +89,14 @@ $(document).ready(function(){
 				</tr>
 			</thead>
 			<tbody>
-				<?php
-
-				$tab = $_SESSION["tab"] ;
-				$unit = 'Ar';
-				for($i=0; $i<$_SESSION["nbr"]; $i++){
-					$id = $tab[$i]['id'];
-					$nom = $tab[$i]['nom'];
-					$prix_unit = $tab[$i]['prix_unit'];
-					$nombre = $tab[$i]['nombre'];
-					$nc = $tab[$i]['nombre_commande'];
-
-				?>
-                    		<tr>
-					<td> <?=$tab[$i]['id'] ?></td>
-					<td> <?=$tab[$i]['nom'] ?></td>
-					<td> <?=$tab[$i]['prix_unit'] ; echo' '; echo $unit;?></td>
-					<td> <?=$tab[$i]['nombre_commande'] ?></td>
-					<td> <?=$tab[$i]['nombre'] ?></td>
-					<td> <?=$tab[$i]['nombre'] ?></td>
+				
+                    <tr>
+					<td> haha</td>
+					<td> ggg</td>
+					<td> gggg</td>
+					<td> zgzg</td>
+					<td> dfghj</td>
+					<td> erhjku</td>
 					<td>
 						<a href="#eModal<?=$id?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 						<a href="#deleteEmployeeModal<?=$id?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -232,7 +166,6 @@ $(document).ready(function(){
 
 
 				</tr>
-				<?php } ?>
                 	</tbody>
             	</table>
 	</div>
@@ -363,8 +296,3 @@ $(document).ready(function(){
 </body>
 
 </html>
-
-<?php
-}
-
-?>
