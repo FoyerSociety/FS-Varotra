@@ -1,11 +1,11 @@
-from flask import Flask , request
+from flask import Flask , request, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-	return "Hello World", 200
+	return render_template('index.html'), 200
 
 
 @app.route("/admin")
