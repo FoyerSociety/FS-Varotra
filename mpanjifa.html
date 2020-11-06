@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+            <link rel="shortcut icon" type="image/x-icon" href="public/images/icons/favicon.png" />
+            <title>Varotra | Mpanjifa</title>
+            <link rel="stylesheet" href="public/css/bootstrap.min.css">
+            <link rel="stylesheet" href="public/css/style.css">
+            <link rel="stylesheet" href="public/css/sidenav.css">
+            <link rel="stylesheet" href="public/fonts/ionicons.min.css">
+            <link rel="stylesheet" href="public/css/pikaday.min.css">
+            <link rel="stylesheet" href="public/css/et-lineicons.css">
+            <link rel="stylesheet" href="public/css/font-awesome.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="publict/css/pharmacie.css">
+
+<link rel="stylesheet" href="publict/css/modal_succes_supp.css">
+
+<script src="publict/js/jquery.min.js"></script>
+<script src="publict/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// Activate tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+
+	// Select/Deselect checkboxes
+	var checkbox = $('table tbody input[type="checkbox"]');
+	$("#selectAll").click(function(){
+		if(this.checked){
+			checkbox.each(function(){
+				this.checked = true;
+			});
+		} else{
+			checkbox.each(function(){
+				this.checked = false;
+			});
+		}
+	});
+	checkbox.click(function(){
+		if(!this.checked){
+			$("#selectAll").prop("checked", false);
+		}
+	});
+});
+</script>
+
+            
+            
+        </head>
+
+        <style>
+            body{
+                font-family: Poppins, 'Nimbus Sans', sans-serif;
+            }
+        </style>
+
+        <body>
+    
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="accueil">
+                <div class="container"><a class="navbar-brand logo" href="index.html" style="font-size: 35px;" ><i class="fa fa-cart-plus" style="font-size: 50px !important;"></i> Varotra</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="vokatra.html" ><i class="fa fa-list"></i> Lisitry ny vokatra</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+            <div class="container" style="margin-top: 13% !important;">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <h2>Ireo mpanjifa</h2>
+                        </div>
+                    </div>
+                </div>
+        
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Famantarana</th>
+                            <th>Anarana</th>
+                            <th>Karapanondro</th>
+                            <th>Adiresy</th>
+                            <th>Hanova</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                            <td> haha</td>
+                            <td> ggg</td>
+                            <td> gggg</td>
+                            <td> zgzg</td>
+                            <td>
+                                <a href="#deleteEmployeeModal<?=$id?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+        
+                            <!-- Delete Modal HTML -->
+                            <div id="deleteEmployeeModal<?=$id?>" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form value ="<?=$id?>"  method="POST" id="forfa">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Hamafa fanafody</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Hofafana marina ve io fanafody io ?</p>
+                                                <p class="text-warning"><small>Tsy afaka averina intsony io raha voafafa !</small></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Hajanona">
+                                                <span ><input  id="<?=$id?>" type="button"  onclick="cacherform($(this).attr('id'))"  class="btn btn-danger" value="Fafana"  > </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- Hanova ny mahakasika ilay fanafody -->
+                            <div id="eModal<?=$id?>" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form id='mod<?=$id?>'>
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Hanova fanafody</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Famantarana</label>
+                                                    <input type="text"  class="form-control" id="refer_v" disabled="disabled" name ="ref_v" value="<?=$id?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Anarana</label>
+                                                    <input type="text" class="form-control" id="anar_v" name ="anarana_v" disabled="disabled" value="<?=$nom?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Isan'ny fanafody</label>
+                                                    <input type="text" class="form-control" id="isani_v" name="isa_amp_v" value="<?=$nombre?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Vidin'ny iray</label>
+                                                    <input type="text" class="form-control" id="vidin_v" name="vidin_irai_v" value="<?=$prix_unit?>" required>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Hajanona">
+                                                <input type="button" id=<?=$id?> onclick="modimed($(this).attr('id'))" class="btn btn-info" name="manova" value="Hanova">
+                                            </div>
+                                            <div class="form-group">
+                                                <label style="color:red !important; margin-left:15% !important;" id="notis"></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                        </tr>
+                            </tbody>
+                        </table>
+            </div>
+        
+        
+        
+            <!-- Edit Modal HTML -->
+            <div id="addEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="server.php" method="POST"  id="forma">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Hampiditra fanafody</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Famantarana</label>
+                                    <input type="text" id= "refer" class="form-control" name ="ref" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Anarana</label>
+                                    <input type="text"  id="anar" class="form-control"  name ="anarana" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Isan'ny fanafody</label>
+                                    <input type="text" id="isani" class="form-control" name="isa_amp" required>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label>Vidin'ny iray</label>
+                                    <input type="text" id="vidini" class="form-control" name="vidin_irai" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Hajanona">
+                                <input type="button" onclick=ajoumed() class="btn btn-success" name="ampidiro" value="Ampidirina">
+                            </div>
+                            <div class="form-group">
+                                <label style="color:red !important; margin-left:15% !important;" id="notis"></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+            <!-- Voafafa tsara ilay fanafody -->
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box" onclick=vita()>
+                                <i class="material-icons">&#xE876;</i>
+                            </div>
+                            <h4 class="" style="text-align: center !important">Vita!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center"> Voafafa tsara ilay fanafody</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-block" data-dismiss="modal" onclick=vita()>Okay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <!-- Tafiditra tsara ilay fanafody -->
+            <div id="myModalt" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box" onclick=vita()>
+                                <i class="material-icons">&#xE876;</i>
+                            </div>
+                            <h4 class="" style="text-align: center !important">Vita!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center"> Tafiditra tsara ilay fanafody</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-block" data-dismiss="modal" onclick=vita()>Okay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Voaova tsara ilay fanafody -->
+            <div id="myModalh" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box" onclick=vita()>
+                                <i class="material-icons">&#xE876;</i>
+                            </div>
+                            <h4 class="" style="text-align: center !important">Vita!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center"> Voaova tsara ilay fanafody</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-block" data-dismiss="modal" onclick=vita()>Okay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+            
+
+        
+            
+
+            <!--FOOTER START-->
+                <footer class="text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <!-- Footer Logo -->
+                                <div class="footer-logo"> 
+                                    <img src="" alt="">
+                                </div>
+                                <!-- Social Media -->
+                                <div class="social"> 
+                                    <a href="#"><i class="fa fa-facebook-f"></i></a> 
+                                    <a href="#"><i class="fa fa-linkedin"></i></a> 
+                                    <a href="https://github.com/RSI-Society"><i class="fa fa-github"></i></a>
+                                </div>
+                                <!-- Copyright -->
+                                <p style="color: #fff !important;">Copyright © 2020 by <a href="https://github.com/FoyerSociety">F-Society</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            <!--FOOTER END-->
+
+            
+            
+
+            <script src="public/js/jquery.min.js"></script>
+            <script src="public/js/jquery-ui.js"></script>
+            <script src="public/js/bootstrap.min.js"></script>
+            <script src="public/js/pikaday.min.js"></script>
+            <script src="public/js/main.js"></script> <!-- Script principale du projet -->
+            <script src="public/js/theme.js"></script>
+            <script src="public/js/sidenav.js"></script>
+
+            <!-- Script de scroll-->
+            <script src="public/js/scroll/scrollIt.min.js"></script>
+            <script src="public/js/scroll/scripts.js"></script>
+
+
+
+
+            
+        </body>
+    </html>
