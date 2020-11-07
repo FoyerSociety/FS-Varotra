@@ -1,6 +1,22 @@
 from flask import Flask , request, render_template
-
+import pyodbc
+conn = pyodbc.connect('DRIVER={/opt/microsoft/msodbcsql/lib64/libmsodbcsql-17.6.so.1.1}; SERVER=127.0.0.1; PORT=1433; DATABASE=VENTEDB; UID=SA; PWD=root18**; Trusted_Domain=domain.local;') 
 app = Flask(__name__)
+
+
+cursor = conn.cursor()
+cursor.execute("""
+			   INSERT INTO Client(nom_client, cin_client, adresse_client, Password) 
+			   VALUES
+			   ('Aina','123232325231', 'Manakara', 'ainajah')
+			   
+			""")
+cursor.commit()
+ 
+#for row in cursor:
+#     print(row)
+
+
 
 
 @app.route('/')
@@ -31,6 +47,9 @@ def mpanjifa():
 @app.route("/user/<int:username>")
 def user(username):
 	return "Je suis le compte de " + str(username)
+
+
+
 
 if __name__ == "__main__":
 	app.run()
