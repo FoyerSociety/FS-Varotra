@@ -5,14 +5,13 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
             <link rel="shortcut icon" type="image/x-icon" href="public/images/icons/favicon.png" />
-            <title>Varotra | Mpanjifa</title>
-            <link rel="stylesheet" href="public/css/bootstrap.min.css">
-            <link rel="stylesheet" href="public/css/style.css">
-            <link rel="stylesheet" href="public/css/sidenav.css">
-            <link rel="stylesheet" href="public/fonts/ionicons.min.css">
-            <link rel="stylesheet" href="public/css/pikaday.min.css">
-            <link rel="stylesheet" href="public/css/et-lineicons.css">
-            <link rel="stylesheet" href="public/css/font-awesome.css">
+            <title>Varotra | Vokatra</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/css/style.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/fonts/ionicons.min.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/css/pikaday.min.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/css/et-lineicons.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='public/css/font-awesome.css') }}">
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
@@ -28,12 +27,14 @@
 
 
 
-<link rel="stylesheet" href="publict/css/pharmacie.css">
 
-<link rel="stylesheet" href="publict/css/modal_succes_supp.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='publict/css/pharmacie.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='publict/css/modal_succes_supp.css') }}">
 
-<script src="publict/js/jquery.min.js"></script>
-<script src="publict/js/bootstrap.min.js"></script>
+
+<script src="{{ url_for('static', filename = 'publictt/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename = 'publict/js/bootstrap.min.js') }}"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
 	// Activate tooltip
@@ -73,10 +74,10 @@ $(document).ready(function(){
         <body>
     
             <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="accueil">
-                <div class="container"><a class="navbar-brand logo" href="index.html" style="font-size: 35px;" ><i class="fa fa-cart-plus" style="font-size: 50px !important;"></i> Varotra</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="container"><a class="navbar-brand logo" href="/" style="font-size: 35px;" ><i class="fa fa-cart-plus" style="font-size: 50px !important;"></i> Varotra</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="vokatra.html" ><i class="fa fa-list"></i> Lisitry ny vokatra</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/mpanjifa" ><i class="fa fa-list"></i> Lisitry ny mpanjifa</a></li>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +91,12 @@ $(document).ready(function(){
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                            <h2>Ireo mpanjifa</h2>
+                            <h2>Ireo vokatra</h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal" ><i class="material-icons">&#xE147;</i> <span >Hampiditra vokatra</span></a>
+                            <a href="upload.html" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span >Varotra </span></a>
+        
                         </div>
                     </div>
                 </div>
@@ -100,8 +106,11 @@ $(document).ready(function(){
                         <tr>
                             <th>Famantarana</th>
                             <th>Anarana</th>
-                            <th>Karapanondro</th>
-                            <th>Adiresy</th>
+                            <th>Vidin'ny iray</th>
+                            <th>Isan'ny voafandrika</th>
+                            <th>Daty</th>
+                            <th>Sisa</th>
+                            <th>Isany</th>
                             <th>Hanova</th>
                         </tr>
                     </thead>
@@ -112,7 +121,11 @@ $(document).ready(function(){
                             <td> ggg</td>
                             <td> gggg</td>
                             <td> zgzg</td>
+                            <td> dfghj</td>
+                            <td> hahahah</td>
+                            <td> erhjku</td>
                             <td>
+                                <a href="#eModal<?=$id?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 <a href="#deleteEmployeeModal<?=$id?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>
         
@@ -323,17 +336,16 @@ $(document).ready(function(){
             
             
 
-            <script src="public/js/jquery.min.js"></script>
-            <script src="public/js/jquery-ui.js"></script>
-            <script src="public/js/bootstrap.min.js"></script>
-            <script src="public/js/pikaday.min.js"></script>
-            <script src="public/js/main.js"></script> <!-- Script principale du projet -->
-            <script src="public/js/theme.js"></script>
-            <script src="public/js/sidenav.js"></script>
+            <script src="{{ url_for('static', filename = 'public/js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/jquery-ui.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/bootstrap.min.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/pikaday.min.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/main.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/theme.js') }}"></script>
 
             <!-- Script de scroll-->
-            <script src="public/js/scroll/scrollIt.min.js"></script>
-            <script src="public/js/scroll/scripts.js"></script>
+            <script src="{{ url_for('static', filename = 'public/js/scrollIt.js') }}"></script>
+            <script src="{{ url_for('static', filename = 'public/js/scroll/scripts.js') }}"></script>
 
 
 
